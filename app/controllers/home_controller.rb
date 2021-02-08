@@ -1,7 +1,9 @@
 class HomeController < ApplicationController
-  def set_cookies
-    cookies[:username] = "Smith"
-    cookies[:customer_number] = "1234567890"
+  before_action :set_breadcrumbs
+ 
+    def set_cookies
+    cookies.permanent[:username] = "Smith"       #cookie valid for 20 years
+    cookies.permanent[:customer_number] = "1234567890"
   end
 
   def show_cookies
@@ -12,5 +14,23 @@ class HomeController < ApplicationController
   def delete_cookies
     cookies.delete :username
     cookies.delete :customer_number
+  end
+
+  private
+  def set_breadcrumbs
+    if session[:breadcrumbs]
+      @breadcrumbs = session[:breadcrumbs]
+    else
+      @breadcrumbs = Array.new
+    end
+
+    @breadcrumbs.push(request.url)
+
+    if @breadcrumbs.count > 4
+      #shit removes first element
+      @breadcrumbs.shift
+    end
+
+    session[:breadcrumbs] = @breadcrumbs
   end
 end

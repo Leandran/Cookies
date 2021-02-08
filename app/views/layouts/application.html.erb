@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CookieJar</title>
+    <title>CookieJar and Breadcrumbs</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,14 @@
   </head>
 
   <body>
+    <% if @breadcrumbs && @breadcrumbs.any? %>
+      <h3>Surf History</h3>
+      <ul>   <!--to display last entries at the top of each page-->
+        <% @breadcrumbs[0..2].each do |breadcrumb| %>
+        <li><%= link_to breadcrumb, breadcrumb %></li>
+        <% end %>
+      </ul>
+      <% end %>
     <%= yield %>
   </body>
 </html>
