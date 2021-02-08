@@ -17,7 +17,7 @@ class HomeController < ApplicationController
   end
 
   def reset
-    reset_sessions
+    reset_session
     @breadcrumbs = nil
   end
 
