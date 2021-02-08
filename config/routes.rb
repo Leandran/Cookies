@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'home/show_cookies'
+  get 'home/set_cookies'
+  get 'home/delete_cookies'
+  get 'home/reset'
   get 'home/set_cookies'
   get 'home/show_cookies'
   get 'home/delete_cookies'

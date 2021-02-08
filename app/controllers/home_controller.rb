@@ -16,6 +16,11 @@ class HomeController < ApplicationController
     cookies.delete :customer_number
   end
 
+  def reset
+    reset_sessions
+    @breadcrumbs = nil
+  end
+
   private
   def set_breadcrumbs
     if session[:breadcrumbs]
