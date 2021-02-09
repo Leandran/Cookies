@@ -1,24 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Adding cookies into the app, project completed from:
+Learn Rails 5.2: Accelerated Web Development with Ruby on Rails.
 
-Things you may want to cover:
+Source: https://www.amazon.com/Learn-Rails-5-2-Accelerated-Development/dp/148423488X
 
-* Ruby version
+# Technologies and tools
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Ruby on Rails
