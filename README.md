@@ -1,5 +1,3 @@
-# README
-
 Adding cookies into the app, project completed from chapter 8 in Learn Rails 5.2: Accelerated Web Development with Ruby on Rails.
 
 Source: https://www.amazon.com/Learn-Rails-5-2-Accelerated-Development/dp/148423488X
